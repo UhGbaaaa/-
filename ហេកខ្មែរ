@@ -1,0 +1,148 @@
+local kavoUi = loadstring(game:HttpGet("https://pastebin.com/raw/vff1bQ9F"))()
+local window = kavoUi.CreateLib("BysusKhmer","BloodTheme")
+ 
+---Hi
+ 
+local Tab1 = window:NewTab("Main")
+local Tab1Section = Tab1:NewSection("ហេកខ្មែរ")
+local Tab2 = window:NewTab("រត់លឿន")
+local Tab2Section = Tab2:NewSection("ហេកខ្មែរ")
+local Tab3 = window:NewTab("កាលំណត់ហេក")
+local Tab3Section = Tab3:NewSection("កំណត់ហេក")
+local Tab4 = window:NewTab("ហេក Map")
+local Tab4Section = Tab4:NewSection("Loading")
+
+
+ 
+Tab1Section:NewButton("ហស់លូត","Become Frontman",function()
+ 
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/UhGbaaaa/Flyjump/main/Flyjump"))()
+ 
+end) 
+
+Tab1Section:NewButton("វាយសត្រូវបានឆ្ងាយ","Button",function()
+ 
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/UhGbaaaa/HiyBoxNPC/main/Fatauxmmmaa61614912"))()
+ 
+end) 
+
+Tab1Section:NewButton("មើលឃើញសត្រូវ","Become Frontman",function()
+ 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/UhGbaaaa/ESP/main/NPCESPPLAYESP"))()
+ 
+end) 
+ 
+Tab1Section:NewButton("ហស់","Become Guard",function()
+ 
+loadstring(game:HttpGet('https://pastebin.com/raw/YSL3xKYU'))()
+ 
+end) 
+
+Tab1Section:NewButton("ហេកដើរផ្លុះ","Become Guard",function()
+  
+loadstring(game:HttpGet("https://raw.githubusercontent.com/UhGbaaaa/NoClip/main/noclip"))()
+ 
+end) 
+
+Tab2Section:NewButton("រត់លឿន 10%","Become Guard",function()
+ 
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 20
+ 
+end) 
+
+Tab2Section:NewButton("រត់លឿន 20%","Become Guard",function()
+ 
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 30
+ 
+end) 
+
+Tab2Section:NewButton("រត់លឿន 40%","Become Guard",function()
+ 
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 60
+ 
+end) 
+
+Tab2Section:NewButton("រត់លឿន 60%","Become Guard",function()
+ 
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
+ 
+end) 
+
+Tab2Section:NewButton("រត់លឿន 80%","Become Guard",function()
+ 
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 200
+ 
+end) 
+
+Tab2Section:NewButton("រត់លឿន 100%","Become Guard",function()
+ 
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 400
+ 
+end) 
+
+Tab2Section:NewButton("រត់លឿន 150%","Become Guard",function()
+ 
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 1000
+ 
+end) 
+
+Tab2Section:NewButton("រត់លឿន 300%","Become Guard",function()
+ 
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 5000
+ 
+end) 
+
+Tab2Section:NewButton("រត់លឿន 500%","Become Guard",function()
+ 
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 10000
+ 
+end) 
+
+Tab2Section:NewButton("រត់លឿន 1000%","Become Guard",function()
+ 
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 9999999
+ 
+end) 
+
+Tab3Section:NewButton("បង្ហាញ ShiftLock","Become Guard",function()
+ 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/UhGbaaaa/shiftlock/main/shiftlock"))();
+ 
+end) 
+
+Tab3Section:NewButton("Un Lock ស្ទាយរាំ","Become Guard",function()
+ 
+loadstring(game:HttpGet("https://pastebin.com/raw/eCpipCTH"))()
+ 
+end) 
+
+Tab4Section:NewButton("Brokhaven BR ","Become Guard",function()
+ 
+loadstring(game:HttpGet('https://raw.githubusercontent.com/M1ZZ001/BrookhavenR4D/main/Brookhaven%20R4D%20Script'))()
+ 
+end) 
+
+Tab4Section:NewButton("Murder Mystery 2","Become Guard",function()
+ 
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/thaibao/main/TbaoHubMurderMystery2"))()
+ 
+end) 
+
+Tab4Section:NewButton("Survive the killer","Button",function()
+ 
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/Milan08Studio/ChairWare/main/main.lua"))()
+ 
+end) 
+
+Tab4Section:NewButton("Blade Ball","Button",function()
+ 
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BladeBall/main/eng"))()
+ 
+end) 
+
+Tab4Section:NewButton("BloxFRUITS","Button",function()
+ 
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/Rafanchik123/script/main/SpectrumX"))()
+ 
+end) 
