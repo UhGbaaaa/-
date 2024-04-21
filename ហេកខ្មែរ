@@ -129,7 +129,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Hosvile/The-telligenc
  
 end) 
 
-Tab3Section:NewButton(""," ទម្លាក់ របស់របរ",function()
+Tab3Section:NewButton("ទម្លាក់ របស់របរ"," ទម្លាក់ របស់របរ",function()
  
  loadstring(game:HttpGet("https://raw.githubusercontent.com/UhGbaaaa/drop/main/Drop"))()
  
