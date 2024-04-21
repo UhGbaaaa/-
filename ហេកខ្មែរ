@@ -131,7 +131,7 @@ end)
 
 Tab3Section:NewButton(""," ទម្លាក់ របស់របរ",function()
  
- 
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/UhGbaaaa/drop/main/Drop"))()
  
 end) 
 
