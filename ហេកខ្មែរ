@@ -47,7 +47,8 @@ end)
 
 Tab1Section:NewButton("ហេល TP","Button",function()
  
- 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/UhGbaaaa/Click-TP/main/Click%20TP"))()
+
 end) 
 
 Tab2Section:NewButton("រត់លឿន 10%","Become Guard",function()
