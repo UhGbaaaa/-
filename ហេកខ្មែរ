@@ -45,6 +45,11 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/UhGbaaaa/NoClip/main/
  
 end) 
 
+Tab1Section:NewButton("ហេល TP","Button",function()
+ 
+ 
+end) 
+
 Tab2Section:NewButton("រត់លឿន 10%","Become Guard",function()
  
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 20
