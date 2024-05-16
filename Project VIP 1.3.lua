@@ -22,7 +22,6 @@ getgenv().TPSpeed = 3
 getgenv().TPWalk = false
 
 
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/UhGbaaaa/Bysuskhmer-hub_411/main/MyUILib(Unamed).lua.txt"))()
 local Window = Library:Create("BYSUSKHMER 1.3")
 
 local ToggleGui = Instance.new("ScreenGui")
