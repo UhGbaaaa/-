@@ -1,0 +1,134 @@
+local Library = loadstring(Game:HttpGet("https://raw.githubusercontent.com/UhGbaaaa/Android-Value/main/wizard.txt"))()
+
+local PhantomForcesWindow = Library:NewWindow("Prison Life")
+
+local Tab1 = PhantomForcesWindow:NewSection("Give Gun")
+local Tab2 = PhantomForcesWindow:NewSection("Main")
+local Tab3 = PhantomForcesWindow:NewSection("Map")
+local Tab4 = PhantomForcesWindow:NewSection("Team")
+
+Tab1:CreateButton("Remington 870", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(826.1895751953125, 99.98998260498047, 2253.92333984375)
+wait(0.5)
+local args = {
+    [1] = workspace.Prison_ITEMS.giver:FindFirstChild("Remington 870").ITEMPICKUP
+}
+
+workspace.Remote.ItemHandler:InvokeServer(unpack(args))
+
+end)
+
+Tab1:CreateButton("M9", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(826.1895751953125, 99.98998260498047, 2253.92333984375)
+wait(0.5)
+local args = {
+    [1] = workspace.Prison_ITEMS.giver.M9.ITEMPICKUP
+}
+
+workspace.Remote.ItemHandler:InvokeServer(unpack(args))
+
+end)
+
+Tab1:CreateButton("AK-47", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-940.265869140625, 94.60860443115234, 2059.754638671875)
+wait(0.5)
+local args = {
+    [1] = workspace.Prison_ITEMS.giver:FindFirstChild("AK-47").ITEMPICKUP
+}
+
+workspace.Remote.ItemHandler:InvokeServer(unpack(args))
+end)
+
+Tab2:CreateButton("Aim", function()
+local Players = game.Players
+local LocalPlayer = Players.LocalPlayer
+local GetPlayers = Players.GetPlayers
+local Camera = workspace.CurrentCamera
+local WTSP = Camera.WorldToScreenPoint
+local FindFirstChild = game.FindFirstChild
+local Vector2_new = Vector2.new
+local Mouse = LocalPlayer.GetMouse(LocalPlayer)
+function ClosestChar()
+    local Max, Close = math.huge
+    for I,V in pairs(GetPlayers(Players)) do
+        if V ~= LocalPlayer and V.Team ~= LocalPlayer.Team and V.Character then
+            local Head = FindFirstChild(V.Character, "Head")
+            if Head then
+                local Pos, OnScreen = WTSP(Camera, Head.Position)
+                if OnScreen then
+                    local Dist = (Vector2_new(Pos.X, Pos.Y) - Vector2_new(Mouse.X, Mouse.Y)).Magnitude
+                    if Dist < Max then
+                        Max = Dist
+                        Close = V.Character
+                    end
+                end
+            end
+        end
+    end
+    return Close
+end
+
+local MT = getrawmetatable(game)
+local __namecall = MT.__namecall
+setreadonly(MT, false)
+MT.__namecall = newcclosure(function(self, ...)
+    local Method = getnamecallmethod()
+    if Method == "FindPartOnRay" and not checkcaller() and tostring(getfenv(0).script) == "GunInterface" then
+        local Character = ClosestChar()
+        if Character then
+            return Character.Head, Character.Head.Position
+        end
+    end
+
+    return __namecall(self, ...)
+end)
+setreadonly(MT, true)
+end)
+
+Tab2:CreateToggle("Character Highlight [ESP]", function(state)
+getgenv().enabled = state --Toggle on/off
+getgenv().filluseteamcolor = true --Toggle fill color using player team color on/off
+getgenv().outlineuseteamcolor = true --Toggle outline color using player team color on/off
+getgenv().fillcolor = Color3.new(0, 0, 0) --Change fill color, no need to edit if using team color
+getgenv().outlinecolor = Color3.new(1, 1, 1) --Change outline color, no need to edit if using team color
+getgenv().filltrans = 0.5 --Change fill transparency
+getgenv().outlinetrans = 0.5 --Change outline transparency
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Vcsk/RobloxScripts/main/Highlight-ESP.lua"))()
+end)
+
+Tab3:CreateButton("tp - map1", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(823.1114501953125, 130.03990173339844, 2584.92041015625)
+end)
+
+Tab3:CreateButton("tp - map2", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-942.0891723632812, 94.1287612915039, 2062.688232421875)
+end)
+
+Tab3:CreateButton("tp - map3", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(849.7496337890625, 118.98998260498047, 2377.882568359375)
+end)
+
+Tab4:CreateButton("Join Team orange", function()
+local args = {
+    [1] = "Bright orange"
+}
+
+workspace.Remote.TeamEvent:FireServer(unpack(args))
+end)
+
+Tab4:CreateButton("Join Team blue", function()
+local args = {
+    [1] = "Bright blue"
+}
+
+workspace.Remote.TeamEvent:FireServer(unpack(args))
+end)
+
+Tab4:CreateButton("Join Team red", function()
+local args = {
+    [1] = "Bright red"
+}
+
+workspace.Remote.TeamEvent:FireServer(unpack(args))
+end)
