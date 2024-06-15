@@ -32,3 +32,9 @@ getgenv().outlinetrans = 0.5 --Change outline transparency
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Vcsk/RobloxScripts/main/Highlight-ESP.lua"))()
   
   end
+
+if Cmds == "BoomBox Gui" then   
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/UhGbaaaa/-/main/NormalLucious.lua.txt"))()
+  
+  end
