@@ -7,6 +7,9 @@ local Tab2 = PhantomForcesWindow:NewSection("Main")
 local Tab3 = PhantomForcesWindow:NewSection("Map")
 local Tab4 = PhantomForcesWindow:NewSection("Team")
 
+local killAuraEnabled = false
+local killAuraRange = 20
+
 Tab1:CreateButton("Remington 870", function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(826.1895751953125, 99.98998260498047, 2253.92333984375)
 wait(0.5)
@@ -84,6 +87,25 @@ MT.__namecall = newcclosure(function(self, ...)
 end)
 setreadonly(MT, true)
 end)
+
+Tab2:CreateToggle("killAura", function(state)
+killAuraEnabled = state
+    if killAuraEnabled then
+        while killAuraEnabled do
+        for _, v in pairs(game.Players:GetPlayers()) do
+            if v ~= game.Players.LocalPlayer and v.Character and v.Character:FindFirstChild("Humanoid") and v.Character.Humanoid.Health > 0 and (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - v.Character.HumanoidRootPart.Position).Magnitude <= killAuraRange then
+                local args = {
+                    [1] = v.Character.Head.Position,
+                    [2] = v.Character.Head
+                }
+                game:GetService("Players").LocalPlayer.Character.RemoteEvent:FireServer(unpack(args))
+            end
+        end
+        wait()
+    end
+    end
+end)
+
 
 Tab2:CreateToggle("Character Highlight [ESP]", function(state)
 getgenv().enabled = state --Toggle on/off
