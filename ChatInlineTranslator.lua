@@ -68,7 +68,7 @@ local translate, getISOCode do
         bn = "Bengali",
         bs = "Bosnian",
         bg = "Bulgarian",
-        ca = "Catalan",
+        ca = "Cambodia",
         ceb = "Cebuano",
         ny = "Chichewa",
         ['zh-cn'] = "Chinese Simplified",
