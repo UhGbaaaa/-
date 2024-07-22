@@ -279,7 +279,7 @@ function Kavo.CreateLib(kavName, themeList)
     close.Position = UDim2.new(0.949999988, 0, 0.137999997, 0)
     close.Size = UDim2.new(0, 21, 0, 21)
     close.Font = Enum.Font.SourceSans
-    close.Text = Back
+    close.Text = "Back"
     close.TextSize = 5
     close.MouseButton1Click:Connect(function()
         BackThemes()
