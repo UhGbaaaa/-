@@ -280,9 +280,91 @@ function Kavo.CreateLib(kavName, themeList)
     close.Size = UDim2.new(0, 21, 0, 21)
     close.Font = Enum.Font.SourceSans
     close.Text = "Back"
-    close.TextSize = 5
+    close.TextSize = 10
     close.MouseButton1Click:Connect(function()
-        BackThemes()
+        local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/UhGbaaaa/Library-/main/TurtleUiLib.lua%20(1).txt"))()
+
+local window = library:Window("Themes")
+
+window:Button("🛑LightTheme🛑", function()
+
+   _G.Temappp = "LightTheme"
+   _G.ToggleColor = 255, 255, 255
+   main()
+   library:Destroy()
+   noti(" Themes LightTheme ")
+
+end)
+
+window:Button("⚓DarkTheme⚓", function()
+
+   _G.Temappp = "DarkTheme"
+   _G.ToggleColor = 0, 0, 0
+   main()
+   library:Destroy()
+   noti(" Themes DarkTheme ")
+
+end)
+
+window:Button("🥊GrapeTheme🥊", function()
+
+   _G.Temappp = "GrapeTheme"
+   _G.ToggleColor = 255, 255, 0
+   main()
+   library:Destroy()
+   noti(" Themes GrapeTheme ")
+
+end)
+
+window:Button("🎟️BloodTheme🎟️", function()
+
+   _G.Temappp = "BloodTheme"
+   _G.ToggleColor = 255, 255, 0
+   main()
+   library:Destroy()
+   noti(" Themes BloodTheme ")
+
+end)
+
+window:Button("💰Ocean💰", function()
+
+   _G.Temappp = "Ocean"
+   _G.ToggleColor = 255, 0, 0
+   main()
+   library:Destroy()
+   noti(" Themes Ocean ")
+
+end)
+
+window:Button("👑Midnight👑", function()
+
+   _G.Temappp = "Midnight"
+   _G.ToggleColor = 255, 0, 0
+   main()
+   library:Destroy()
+   noti(" Themes Midnight ")
+
+end)
+
+window:Button("💎Sentinel💎", function()
+
+   _G.Temappp = "Sentinel"
+   _G.ToggleColor = 255, 0, 0
+   main()
+   library:Destroy()
+   noti(" Themes Sentinel ")
+
+end)
+
+window:Button("🕶️Synapse👓", function()
+
+   _G.Temappp = "Synapse"
+   _G.ToggleColor = 255, 0, 0
+   main()
+   library:Destroy()
+   noti(" Themes Synapse ")
+
+end)
     end)
 
     MainSide.Name = "MainSide"
