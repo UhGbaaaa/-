@@ -1,0 +1,72 @@
+local lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/acsu123/HOHO_H/main/hoho_lib.lua", true))()
+local win = lib:Window("HOME","GEF",Color3.new(0.333333, 0.666667, 1))
+local tab = win:Tab("Give ltems")
+local t2 = win:Tab("Money Auto")
+local label = tab:Label("Label", properties) --properties: {["Visible"] = flase}
+label:NewLabel("Main", properties)
+tab:Line()
+
+local localplayer = game:GetService("Players").LocalPlayer
+
+tab:Button("Give Hammer", function()
+			localplayer.Character:MoveTo(workspace.Pickups:FindFirstChild("Hammer").Position)
+end)
+
+tab:Button("Give Bat", function()
+			localplayer.Character:MoveTo(workspace.Pickups:FindFirstChild("Bat").Position)
+end)
+
+tab:Button("Give Food", function()
+			localplayer.Character:MoveTo(workspace.Pickups:FindFirstChild("Food").Position)
+end)
+
+tab:Button("Give GPS", function()
+			localplayer.Character:MoveTo(workspace.Pickups:FindFirstChild("GPS").Position)
+end)
+
+tab:Button("Give Crowbar", function()
+			localplayer.Character:MoveTo(workspace.Pickups:FindFirstChild("Crowbar").Position)
+end)
+
+tab:Button("Give Money", function()
+			localplayer.Character:MoveTo(workspace.Pickups:FindFirstChild("Money").Position)
+end)
+
+tab:Button("Give Shotgun", function()
+			localplayer.Character:MoveTo(workspace.Pickups:FindFirstChild("Shotgun").Position)
+end)
+
+tab:Button("Give Shells", function()
+			localplayer.Character:MoveTo(workspace.Pickups:FindFirstChild("Shells").Position)
+end)
+
+tab:Button("Give Lantern", function()
+			localplayer.Character:MoveTo(workspace.Pickups:FindFirstChild("Lantern").Position)
+end)
+
+t2:Button("Auto (on)", function()
+			getgenv().loopJ = true
+    game:GetService("RunService").Heartbeat:Connect(function()
+        if loopJ == true then
+            pcall(function()
+			localplayer.Character:MoveTo(workspace.Pickups:FindFirstChild("Hurtbox").Position)
+			wait(0.5)
+			game:GetService("Players").LocalPlayer.Character.Crowbar.DoSwing:FireServer()
+            end)
+        end
+    end)
+end)
+
+t2:Button("Auto (off)", function()
+			getgenv().loopJ = false
+    game:GetService("RunService").Heartbeat:Connect(function()
+        if loopJ == true then
+            pcall(function()
+			localplayer.Character:MoveTo(workspace.Pickups:FindFirstChild("Hurtbox").Position)
+			wait(0.5)
+			game:GetService("Players").LocalPlayer.Character.Crowbar.DoSwing:FireServer()
+            end)
+        end
+    end)
+end)
+
